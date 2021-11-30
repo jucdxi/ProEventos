@@ -1,0 +1,52 @@
+ aquivo json para versiona o sdk:
+    global.json
+    {
+        "sdk":{
+            "version":"3.0.104"
+        }
+    }
+ comando:
+     dontnet --version (versão)
+     dontnet -h (help)
+     dontnet new (criar)
+        dontnet new webapi -n(nome pj) ProEventos.API
+     dontnet run (executar) 
+API
+     arquivo startup  conexção  http 
+     config da conexção launchSettings.json
+    certificado https
+        dotnet dev-certs https --trust
+    p controller
+    mudar a controllaer weatherforecastcontroller.cs 
+    verbos http
+    rotas
+    [HttpGet]
+        public string Get()
+        {
+           return "Exemplo de Get";
+        }
+        
+        [HttpPost]
+        public string Post()
+        {
+           return "Exemplo de Post";
+        }
+
+        [HttpPut("{id}")] //passar o id no indereço /1
+        public string Put(int id)
+        {
+           return $"Exemplo de Put com id = {id}";
+        }
+
+        [HttpDelete("{id}")]
+        public string Delete(int id)
+        {
+           return $"Exemplo de Delete com id = {id}";
+        }
+
+        p model
+        class evento
+    usar o evento dentro da controller
+	
+
+     
