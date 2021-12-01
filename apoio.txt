@@ -16,7 +16,9 @@ API
      config da conexção launchSettings.json
     certificado https
         dotnet dev-certs https --trust
-    p controller
+    
+    P Controller
+    
     mudar a controllaer weatherforecastcontroller.cs 
     verbos http
     rotas
@@ -44,9 +46,37 @@ API
            return $"Exemplo de Delete com id = {id}";
         }
 
-        p model
+   P Models
         class evento
     usar o evento dentro da controller
-	
+    dotnet tool list --global dotnet-ef//ferramentas instaladas
+    Entity FrameworkCore //mapeamento dados
+	 dotnet-ef
+
+   P Data
+      public class DataContext : DbContext (vem do using FrameworkCore)
+      iserir no startup
+      services.AddDbContext<DataContext>(
+                //passar parametro
+            );
+      isnerir no appsettings.Developmente para conexção do Db
+          "ConnectionStrings": {
+               "Default": "Data Source = ProEventos.db"
+            }
+
+      criar as migrations
+      dotnet ef migrations add Initial -o Data/Migrations
+
+      dotnet ef database update
+
+      inserir o context na controller
+       private readonly DataContext _context;
+        
+        public EventoController(DataContext context)
+        {
+            _context = context;
+            
+        }
+
 
      
