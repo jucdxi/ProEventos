@@ -78,5 +78,18 @@ API
             
         }
 
+        front 
+        angular
+        getStart setup //site angula
+        start ng serve
+
+      seletores dentro do ts referente cada componete
+      diretivas são recursos do angular
+         ngFor - funciona como foreach
+        
+
+        https://fontawesome.com/
+        ngx-bootstrap
+
 
      
